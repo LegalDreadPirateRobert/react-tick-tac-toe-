@@ -1,0 +1,143 @@
+
+@media (max-width:40rem){
+    .container-wrapper{
+        width:100vw;
+        animation: loadGee 2000ms 0s backwards
+    }
+    
+    .game-container{
+        width:90%;
+        border:3px solid black;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:10%;
+        margin-bottom:5%;
+        height:50vh;
+        overflow:hidden
+    }
+    .layer{
+        width:100%;
+        height:calc(50vh/3);
+        display:flex;
+        flex-direction: row
+    }
+    .layer:nth-child(1){
+        border-bottom: 3px solid black;
+    }
+    .layer:nth-child(2){
+        border-bottom: 3px solid black;
+    }
+    /* .layer:nth-child(3){
+    } */
+    .spot{
+        width:calc(100%/3);
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+    }
+    .spot:nth-child(2),
+    .spot:nth-child(5),
+    .spot:nth-child(8){
+        border-right:3px solid black;
+        border-left:3px solid black
+        /* border: 0px 3px 0px 3px solid black; */
+    }
+    
+    .input-field{
+        width:70%;
+        height:calc(50vh/5);
+        outline:none;
+        border: 1px solid black;
+        font-size: calc(50vh/6);
+        text-align: center;
+        padding:0px;
+        outline:none
+    }
+    .svg-x-icon{
+        width:80%;
+        height:calc(50vh/5);
+    }
+    .color-picker{
+        width:40%;
+        padding:0px;
+    }
+    .start-game-wrapper{
+        width:100%;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        margin-top:50%;
+        animation: loadGee 2000ms 0s alternate;
+        position: relative;
+    }
+    .start-button{
+        width:30%;
+        border:1px solid black;
+        color:black;
+        background: transparent;
+        padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: calc(50vh/11);
+        outline:none;
+        cursor:pointer;
+        animation: bounceButton 1000ms 0s alternate backwards;
+        animation-iteration-count: infinite;
+        position: absolute;
+        margin:10% auto 0px auto;
+        left:30;
+    }
+    .start-button:hover{
+        color:white;
+        background:black
+    }
+    .start-button:active{
+        color:white;
+        background:black
+    }
+    .game-info-wrapper{
+        width:100%;
+    }
+    .game-info-button{
+        display:flex;
+        width:60%;
+        margin:0px auto 0px auto;
+        justify-content:space-around
+    }
+    .game-info-button > button{
+        width:30%;
+        border:1px solid black;
+        color:black;
+        background: transparent;
+        padding:5px;
+        font-family: Arial, Helvetica, sans-serif;
+        outline:none;
+        cursor:pointer;
+    }   
+    .game-info-button > button:hover{
+        color:white;
+        background: black;
+    }
+    input[disabled]{
+        background-color:rgb(206, 141, 141);
+        transition:background-color 500ms
+    }
+    @keyframes loadGee {
+        from{
+            opacity:0
+        }
+        to{
+            opacity:1
+        }
+    }
+
+    @keyframes bounceButton {
+        from{
+            top:10%
+        }
+        to{
+            top:13%
+        }
+        
+    }
+}

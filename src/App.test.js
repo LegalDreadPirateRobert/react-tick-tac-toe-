@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react"
+import App from "./App"
+import { mount } from "./enzyme"
+let wrapped;
+beforeEach(()=>{
+    console.log(mount)
+    wrapped = mount(<App />);
+})
+afterEach(()=>{
+    wrapped.unmount();
+})
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+it("Check if button was rendered",()=>{
+    console.log(true);
+    expect(wrapped.find("button").length).toEqual(4);
+})
+it("what popaing",()=>{
+    console.log("true");
+    // expect(wrapped.find("button").length).toEqual(1);
+})
